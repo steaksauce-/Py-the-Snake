@@ -10,11 +10,11 @@ Feel free to contribute to this project, but PLEASE:
 ***beginners only!***
 
 Current TODO:
-# Play, Quit, Settings menu
-# In settings menu, enable/disable sound, set difficulty
-# Use python logo for food image
-# Add sounds
-# Log high score
-# Installer
+ Play, Quit, Settings menu
+ In settings menu, enable/disable sound, set difficulty
+ Use python logo for food image
+ Add sounds
+ Log high score
+ Installer
 
-## Possibly turn game into code-based instructions???
+ Possibly turn game into code-based instructions???
