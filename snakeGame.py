@@ -56,7 +56,7 @@ def gameOver():
 
 # Score function
 def showScore(choice=1):
-    scoreFont = pygame.font.SysFont('FreeMono', 24) # The font for the scoreFont
+    scoreFont = pygame.font.SysFont('FreeMono', 24) # The font for the score
     scoreSurface = scoreFont.render('Score : {0}'.format(score), True, black)
     scoreRectangle = scoreSurface.get_rect() # Changes the surface and font to a rectangle
     if choice == 1:
@@ -64,6 +64,32 @@ def showScore(choice=1):
     else:
         scoreRectangle.midtop = (360, 120)
     playSurface.blit(scoreSurface, scoreRectangle)
+
+# Menu function
+def showMenu():
+    menuFont = pygame.font.SysFont('FreeMono', 72) # The font for the menu
+    menuSurface = menuFont.render('MENU', True, black) # The menu text
+    menuRectangle = menuSurface.get_rect() # Changes the surface and font to a rectangle
+    menuRectangle.midtop = (360, 15) # The XY coordinates to place the Menu rectangle
+
+    menuGeneralFont = pygame.font.SysFont('FreeMono', 32) # General font for the menu options
+
+
+    menuPlaySurface = menuGeneralFont.render('PLAY', True, black) # Play text
+    menuPlayRectangle = menuPlaySurface.get_rect() # Play rectangle
+    menuPlayRectangle.midtop = (360, 100) # Play XY coordinates
+
+
+    menuQuitSurface = menuGeneralFont.render('QUIT', True, black) # Quit text
+    menuQuitRectangle = menuQuitSurface.get_rect() # Quit rectangle
+    menuQuitRectangle.midtop = (360, 150) # Quit XY coordinates
+    # Place Menu header and options on the screen
+
+    playSurface.blit(menuSurface, menuRectangle)
+    playSurface.blit(menuPlaySurface, menuPlayRectangle)
+    playSurface.blit(menuQuitSurface, menuQuitRectangle)
+    pygame.display.flip()
+    time.sleep(5)
 
 # Play function
 ## Insert code from Main Logic
